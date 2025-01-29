@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: white;
+}
+h1 {
+    color: white;
+}
+li {
+    color: white;
+}   
+a {
+    color: white;
+    font: helvetica;
+}
+.artist {
+    border: 1px solid red;
+    padding: 10px;
+    display: inline-block;
+
+}
+
+.spotlight {
+    border: 3px dotted yellow;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+}
