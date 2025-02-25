@@ -1,6 +1,6 @@
 import MessageCard from '../components/MessageCard'
 import Navbar from '../components/Navbar'
-import MessagesForm from '../components/messagesForm';
+import MessagesForm from '../components/MessagesForm'
 
 const messages = [
     {
