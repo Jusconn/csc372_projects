@@ -1,4 +1,3 @@
-import '../Index.css'
 import Navbar from '../components/Navbar'
 
 function InformationPage() {
