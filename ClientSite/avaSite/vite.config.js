@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',
     port: process.env.PORT || 5173,
-    allowedHosts: ['csc372-projects-6158.onrender.com'], // Add your Render domain here
+    allowedHosts: ['csc372-projects-6158.onrender.com'],
   },
   plugins: [react()]
 });
