@@ -9,7 +9,7 @@ function FilmsPage() {
   // fetches the films from the films.json file
   useEffect(() => {
     async function fetchFilms() {
-      let filmsData = await getRequest("http://localhost:5173/src/data/films.json","json");
+      let filmsData = await getRequest("/src/data/films.json", "json");
       setFilms(filmsData);
     }
     fetchFilms();
