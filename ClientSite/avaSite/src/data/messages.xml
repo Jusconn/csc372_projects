@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<messages>
+    <message id="1">
+        <from>Bart</from>
+        <text>Saw your work at the fatelli gallery last weekend. Great stuff!</text>
+    </message>
+    <message id="2">
+        <from>Lisa</from>
+        <text>Loved your work with Dogtree Band!</text>
+    </message>
+    <message id="3">
+        <from>Bart</from>
+        <text>Just found your website. It's awesome! You really know your stuff when it comes to video work.</text>
+    </message>
+    <message id="4">
+        <from>Jess</from>
+        <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</text>
+    </message>
+</messages>

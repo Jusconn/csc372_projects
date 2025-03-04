@@ -1,6 +1,8 @@
+import { useState,useEffect, use } from 'react'
 import MessageCard from '../components/MessageCard'
 import Navbar from '../components/Navbar'
 import MessagesForm from '../components/MessagesForm'
+import { getRequest } from '../js/requests'
 
 const messages = [
     {
@@ -25,7 +27,29 @@ const messages = [
     },
   ];
 
+function parseXMLMessages(xml) {
+  let messageElements = xml.getElementsByTagName("message");
+  let parsedMessages = [];
+  for (let i = 0; i < messageElements.length; i++) {
+    let message = messageElements[i];
+    let from = message.getElementsByTagName("from")[0].textContent;
+    let text = message.getElementsByTagName("text")[0].textContent;
+    parsedMessages.push({ id: i, from: from, text: text });
+  }
+  return parsedMessages;
+}
+
 function MessagesPage() {
+  const [messages, setMessages] = useState([]);
+    // fetches the messages from the messages.xml file
+    useEffect(() => {
+      async function fetchMessages() {
+        let messages = await getRequest("http://localhost:5173/src/data/messages.xml","xml");
+        messages = parseXMLMessages(messages);
+        setMessages(messages);
+      }
+      fetchMessages();
+    }, []);
 
   return (
     <>
