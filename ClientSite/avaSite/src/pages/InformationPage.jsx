@@ -1,36 +1,52 @@
 import Navbar from '../components/Navbar'
+import { useEffect, useState } from 'react'
+import { getRequest } from '../js/requests'
+import $ from 'jquery'
 
 function InformationPage() {
+    const [info, setInfo] = useState(<div></div>);
+    // fetches the information from the info.html file
+    useEffect(() => {
+          async function fetchInfo() {
+            let info = await getRequest("src/data/info.html", "html");
+            let parser = new DOMParser();
+            let doc = parser.parseFromString(info, "text/html");
+            let bodyContent = doc.body.innerHTML;
+            console.log(bodyContent);
+            setInfo(bodyContent);
+          }
+          fetchInfo();
+        }, []);
+    // fetches the contact information from the contact.html file
+    useEffect(() => {
+        async function fetchContact() {
+          let contact = await getRequest("src/data/contact.html", "html");
+          let parser = new DOMParser();
+          let doc = parser.parseFromString(contact, "text/html");
+          let bodyContent = doc.body.innerHTML;
+          $(".contact-info").html(bodyContent);
+        }
+        fetchContact();
+      }, []);
 
-  return (
+return (
     <>
     <Navbar/>
     <div className="main-content">
-        <button id="open">Menu</button>
+    <button id="open">Menu</button>
         <h1>Information</h1>
         <div className="profile">
             <div className="contact-image">
                 <img src="/blankpfp.svg"/>
             </div>
             <div className="contact-info">
-                <h2>Contact</h2>
-                <h4>EMAIL: Avarmoniz@gmail.com</h4>
-                <h4>INSTAGRAM: @AOMOTGO</h4>
-                <h4>CV</h4>
             </div>
         </div>
-        <div className="summary">
-            <p>
-            Ava Moniz is a Rhode Island-based video artist specializing in experimental visuals that push the boundaries of storytelling and abstraction.
-            Her work blends analog and digital techniques, creating immersive, dreamlike experiences that resonate with audiences. 
-            Collaborating closely with local bands, Ava crafts visuals that enhance live performances, music videos, and multimedia projects, bringing a unique 
-            and dynamic energy to the independent music scene. With a passion for exploring new artistic frontiers, 
-            she continues to shape the intersection of sound and image through her innovative approach.
-            </p>
+        <div className="summary" dangerouslySetInnerHTML={{__html: info}}>
         </div>
     </div>
     </>
-  )
+)
 }
 
 export default InformationPage
