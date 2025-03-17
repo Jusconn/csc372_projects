@@ -162,6 +162,18 @@
   transition: background-color 0.3s ease;
 }
 
+.spotlight {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: #4A4A4A;
+}
+.spotlight img {
+  border: #C16E4A 2px solid;
+}
+
 @media (max-width: 480px) {
   .navbar {
       position: fixed;
