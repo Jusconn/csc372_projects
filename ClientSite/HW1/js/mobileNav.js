@@ -1,6 +1,6 @@
 //open nav menu on mobile
 document.getElementById('open').addEventListener('click', function() {
-    var navbars = document.getElementsByClassName('navbar');
+    var navbars = document.getElementsByclassNameName('navbar');
     for (var i = 0; i < navbars.length; i++) {
         navbars[i].style.display = 'block';
     }
@@ -8,7 +8,7 @@ document.getElementById('open').addEventListener('click', function() {
 
 //close nav menu on mobile
 document.getElementById('close').addEventListener('click', function() {
-    var navbars = document.getElementsByClassName('navbar');
+    var navbars = document.getElementsByclassNameName('navbar');
     for (var i = 0; i < navbars.length; i++) {
         navbars[i].style.display = 'none';
     }
