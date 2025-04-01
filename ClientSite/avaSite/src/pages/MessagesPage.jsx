@@ -44,7 +44,7 @@ function MessagesPage() {
     // fetches the messages from the messages.xml file
     useEffect(() => {
       async function fetchMessages() {
-        let messages = await getRequest("src/data/messages.xml","xml");
+        let messages = await getRequest("data/messages.xml","xml");
         messages = parseXMLMessages(messages);
         setMessages(messages);
       }

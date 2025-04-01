@@ -16,7 +16,7 @@ function InformationPage() {
     // fetches the information from the info.html file
     useEffect(() => {
           async function fetchInfo() {
-            let info = await getRequest("src/data/info.html", "html");
+            let info = await getRequest("data/info.html", "html");
             let parser = new DOMParser();
             let doc = parser.parseFromString(info, "text/html");
             let bodyContent = doc.body.innerHTML;
@@ -28,7 +28,7 @@ function InformationPage() {
     // fetches the contact information from the contact.html file
     useEffect(() => {
         async function fetchContact() {
-          let contact = await getRequest("src/data/contact.html", "html");
+          let contact = await getRequest("data/contact.html", "html");
           let parser = new DOMParser();
           let doc = parser.parseFromString(contact, "text/html");
           let bodyContent = doc.body.innerHTML;
