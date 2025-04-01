@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "node src/expressServer.cjs",
+    "start": "npm run build && node src/expressServer.cjs",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
