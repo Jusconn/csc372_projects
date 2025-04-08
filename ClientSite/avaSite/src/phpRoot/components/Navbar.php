@@ -6,7 +6,7 @@ function renderNavbar() {
                 <li><h1>Ava Moniz</h1></li>
                 <li><a href="https://csc372-projects-6158.onrender.com/">Information</a></li>
                 <li><a href="https://csc372-projects-6158.onrender.com/films">Films</a></li>
-                <li><a href="">Messages</a></li>
+                <li><a href="https://jwchacon.rhody.dev/csc372_projects/ClientSite/avaSite/src/phpRoot/index.php">Messages</a></li>
             </ul>
           </nav>';
 }
