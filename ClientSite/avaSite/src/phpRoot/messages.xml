@@ -1,0 +1,22 @@
+<messages>
+    <message>
+        <from>Bart</from>
+        <text>Saw your work at the fatelli gallery last weekend. Great stuff!</text>
+        <date>2023-10-01</date>
+    </message>
+    <message>
+        <from>Lisa</from>
+        <text>Loved your work with Dogtree Band!</text>
+        <date>2023-10-02</date>
+    </message>
+    <message>
+        <from>Bart</from>
+        <text>Just found your website. It's awesome! You really know your stuff when it comes to video work.</text>
+        <date>2023-10-03</date>
+    </message>
+    <message>
+        <from>Jess</from>
+        <text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</text>
+        <date>2023-10-04</date>
+    </message>
+</messages>
