@@ -23,7 +23,7 @@ export default function Navbar() {
                         <NavLink id="/films" className="NavLink" to="/films" aria-label="Navigate to Films page">Films</NavLink>
                     </li>
                     <li>
-                        <NavLink id="/messages" className="NavLink" to="/messages" aria-label="Navigate to Messages page">Messages</NavLink>
+                        <a id="/messages" className="NavLink" href="https://jwchacon.rhody.dev/csc372_projects/ClientSite/avaSite/src/phpRoot/index.php" aria-label="Navigate to Messages page">Messages</a>
                     </li>
                 </ul>
             </nav>
